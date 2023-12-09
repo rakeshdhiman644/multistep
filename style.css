@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+#regForm {
+  margin: 100px auto;
+  padding: 0 40px;
+  width: 50%;
+  min-width: 300px;
+  text-align: center;
+  border-radius:10px;
+}
+
+#regForm h1 {
+  width: 54px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #dfe6ed;
+  height: 54px;
+  border-radius: 50%;
+}
+#regForm h1 i{
+  margin-top: 14px;
+  font-size: 24px;
+  color: #c3cfd9;
+}
+.tab {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+input{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+ width: 100%;
+ border-radius: 5px;
+ background-color: rgb(255, 255, 255);
+ border:1px solid #dfe8ec;
+ padding:14px 18px;	
+ margin-bottom:12px;
+}
+input::placeholder{
+	font-family: 'Montserrat', sans-serif;
+}
+#map{
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 12px;
+} 
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+#tab1 > span,	
+#tab2 > span,
+#tab3 > span,
+#tab4 > span,
+#tab5 > span,
+#tab6 > span,
+#tab7 > span,
+#tab8 > span,
+.video_section > span,
+#tab9 > span{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif; 
+  letter-spacing:0;
+  padding: 0;
+  display:inline-block;
+  margin-bottom:12px;
+}
+#tab5 > span{
+	display:inline-block;
+	margin-bottom:20px;
+}
+#tab5 .radio-button label .box__wrapper{
+  width: 200px;
+  height: 175px;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #80808075;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius:10px;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
+}
+#tab5 .radio-button label .box__wrapper:hover{
+	border:2px solid #ffc60a;
+	transform:scale(1.05);
+}
+#tab5 .radio-button label .box__wrapper i,
+#tab5 .box__wrapper label .box__wrapper p{
+	flex-basis:100%;
+}
+#tab5 .radio-button label .box__wrapper p{
+	font-size:24px;
+	margin-top:0px;
+}
+
+#tab5 .radio-button label input:checked + .box__wrapper{
+	border:2px solid #ffc60a;
+}
+
+#prevBtn{
+  margin-right:16px;
+}
+#nextBtn,
+#prevBtn{
+  background-color: #ffd95c;
+  font-size: 18px;
+  color: #000;
+  font-family: Quicksand;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  border-style: none;
+  border-radius: 25px;
+  min-width:190px;
+  height:58px;
+  cursor:pointer;
+}	
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #ffc60a;
+  opacity:1;
+}
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + .solar-icon, [type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + .solar-icon, [type=radio]:checked + img {
+  outline: 2px solid #145da0;
+}
+.solar-icon {
+  background-color: #fff;
+  font-size: 75px;
+  color: #145da0;
+  padding: 6px 6px 6px 6px;
+  border-radius: 6px;
+}
+/*label{
+  margin-left: 4rem;
+}*/
+.radio-button{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items:center;
+}
+.compaty-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:  18px;
+  margin-top:20px;
+}
+.compaty-logo .c-logo__wrapper{
+  width: 150px;
+  height: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #80808075;
+  border-radius:10px;
+  transition: all 0.3s ease;
+}
+.compaty-logo .c-logo__wrapper:hover{
+	border:2px solid #ffc60a;
+  transform:scale(1.05);
+}
+.compaty-logo label input:checked + .c-logo__wrapper{
+	border:2px solid #ffc60a;
+}
+.compaty-logo select{
+  padding: 10px 12px;
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #aaaaaa;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.compaty-logo img {
+  width: 60%;
+}
+
+/* pregress bar */
+
+.progressBar {
+  margin-bottom: 26px;
+  margin-bottom: 1.66em;
+  position: relative;
+  margin-top: 2rem;
+  
+}
+.progressBarcontainer {
+  width: 100%;
+  height: 10px;
+  background: #E1E1E1!important;
+  overflow: hidden;
+  border-radius: 0.3em;
+}
+.progressBarValue {
+  height: 10px;
+  float: left;
+  border-radius: 0.3em;
+  background: red; /* Old browsers */
+  background: #ffc60a;
+}
+
+/* end */
+@media only screen and (max-width: 767px) {
+  select{
+    width: 100%;
+  }
+  .compaty-logo {
+    gap: 18px;
+  }
+  .compaty-logo img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .compaty-logo img {
+    width: 100%;
+  }
+  select{
+    width: 100%;
+  }    
+}
